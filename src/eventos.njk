@@ -1,0 +1,132 @@
+---
+title: Armazém 71 - Cucina - Vino
+layout: "base.njk"
+cssPath: "/css/eventos.css"
+---
+
+{% include 'nav.njk' %}
+
+<header class="header2">
+    <img class="tablet-desktop header-back" src="../img/eventos/header.png" alt="">
+    <img class="only-mobile header-back" src="../img/eventos/header-mob.png" alt="">
+    <a href="/">
+            <img 
+                src="../img/nav-logo.png" 
+                srcset="../img/nav-logo@2x.png 2x"
+                class="nav-logo" alt="">
+    </a>
+</header>
+
+<section class="viva">
+    <h1>Viva momentos únicos no Armazém 71</h1>
+    <p>
+        No Armazém 71, você encontra o espaço ideal para celebrar momentos especiais, como confraternizações, aniversários, mini weddings ou eventos corporativos.
+        <br/><br/>
+        Oferecemos um cardápio personalizado conforme a sua necessidade, uma seleção especial de vinhos e um ambiente aconchegante e acolhedor.
+        <br/><br/>
+        Contamos ainda com infraestrutura completa e uma equipe especializada para receber você e seus convidados com excelência.
+    </p>
+    <a href="" class="transparentButton">Faça seu evento conosco</a>
+</section>
+
+<section class="places">
+    <div class="selector">
+        <button class="yellowButton" id="juveve">Juvevê</button>
+        <button class="yellowButton" id="shopping">Shopping Curitiba</button>
+    </div>
+    <div class="intro" id="info">
+        <img src="../img/eventos/juveve.png" alt="">
+        <div class="right-info">
+            <h2>Juvevê</h2>
+            <p>
+                Nosso deck se adapta para casamentos, formaturas e celebrações especiais. Oferecemos jantares à la carte, finger foods e menus personalizados para atender a todos os gostos e necessidades.
+            </p>    
+            <h5>
+                R. Rocha Pombo, 246 - Juvevê, Curitiba - PR
+            </h5>
+            <h5>
+                Estacionamento próprio e gratuito
+            </h5>
+            <a href="" class="brownButton">Solicite orçamento</a>
+        </div>
+    </div>
+    <div class="images" id="images">
+        <img src="../img/eventos/juveve1.png" alt="">
+        <img src="../img/eventos/juveve2.png" alt="">
+        <img src="../img/eventos/juveve3.png" alt="">
+    </div>
+</section>
+
+{% include 'footer.njk' %}
+
+<script>
+    const selector = document.querySelector('.selector');
+    const intro = document.querySelector('#info');
+    const images = document.querySelector('#images');
+    const juveve = document.querySelector('#juveve');
+    const shopping = document.querySelector('#shopping');
+
+    let padrao = "juveve";
+
+    shopping.addEventListener("click", () => {
+        padrao = "shopping";
+        updateSection()
+    });
+
+    juveve.addEventListener('click', () => {
+        padrao = "juveve"
+        updateSection()
+    });
+
+
+    function updateSection() {
+        switch (padrao){
+            case "juveve":
+                intro.innerHTML = `
+                <img src="../img/eventos/juveve.png" alt="">
+                <div class="right-info">
+                    <h2>Juvevê</h2>
+                    <p>
+                        Nosso deck se adapta para casamentos, formaturas e celebrações especiais. Oferecemos jantares à la carte, finger foods e menus personalizados para atender a todos os gostos e necessidades.
+                    </p>    
+                    <h5>
+                        R. Rocha Pombo, 246 - Juvevê, Curitiba - PR
+                    </h5>
+                    <h5>
+                        Estacionamento próprio e gratuito
+                    </h5>
+                    <a href="" class="brownButton">Solicite orçamento</a>
+                </div>
+                `
+                images.innerHTML = `
+                <img src="../img/eventos/juveve1.png" alt="">
+                <img src="../img/eventos/juveve2.png" alt="">
+                <img src="../img/eventos/juveve3.png" alt="">
+                `;
+            break;
+            case "shopping":
+                intro.innerHTML = `
+                <img src="../img/eventos/shopping.png" alt="">
+                <div class="right-info">
+                    <div class="name">
+                        <h2>Shopping</h2>
+                        <h2>Curitiba</h2>
+                    </div>
+                    <p>
+                        Entre luz suave, cores acolhedoras e detalhes que encantam, o Armazém 71 do Shopping Curitiba transforma cada evento em uma experiência sensorial única, que vai muito além da gastronomia.            </p>    
+                    <h5>
+                        R. Brg. Franco, 2300 - Loja 256 - Largo Curitiba            
+                    </h5>
+                    <a href="" class="brownButton">Solicite orçamento</a>
+                </div>
+                `
+                images.innerHTML = `
+                <img src="../img/eventos/shopping1.png" alt="">
+                <img src="../img/eventos/shopping2.png" alt="">
+                <img src="../img/eventos/shopping3.png" alt="">
+                `;
+            break;
+        }
+    }
+
+</script>

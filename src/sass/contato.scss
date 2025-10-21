@@ -1,0 +1,62 @@
+@use 'index' as *;
+
+.contato{
+    padding: 25rem 0 12rem;
+    position: relative;
+    .contato-logo{
+        position: absolute;
+        left: 50%;
+        top: 3.6rem;
+        transform: translateX(-50%);
+    }
+    .wrap-contato{
+        display: flex;
+        flex-direction: column;
+        gap: 14rem;
+        width: 85%;
+        margin: auto;
+        align-items: center;
+        .item-contato{
+            display: flex;
+            gap: 10rem;
+            align-items: center;
+            justify-content: center;
+            .info-contato{
+                display: flex;
+                flex-direction: column;
+                width: 52.5rem;
+                gap: 1.5rem;
+                h2{
+                    font-size: 4.4rem;
+                    line-height: 4.4rem;
+                    font-weight: 400;
+                    font-family: $libre;
+                    color: $marrom;
+                    letter-spacing: 0;
+                    margin-bottom: 1.5rem;
+                }
+                h3{
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    letter-spacing: 0;
+                    font-weight: 600;
+                    font-family: $area;
+                    color: $preto;
+                    margin-top: 1.5rem;
+                }
+                a, p{
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    font-family: $area;
+                    color: $preto;
+                }
+                .icons-contato{
+                    display: flex;
+                    gap: 1.5rem;
+                }
+            }
+        }
+    }
+}

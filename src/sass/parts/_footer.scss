@@ -1,0 +1,67 @@
+@use "./colors" as *;
+@use "./global" as *;
+
+footer{
+    background-color: $background2;
+    color: $background;
+    padding: 8.3rem 0 1rem;
+    position: relative;
+    .info-footer{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+        .top-footer{
+            display: flex;
+            gap: 5rem;
+            h3{
+                font-size: 2rem;
+                line-height: 2.4rem;
+                letter-spacing: 0;
+                font-weight: 700;
+                font-family: $area;
+            }
+            h4{
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 0;
+                font-weight: 600;
+                font-family: $area;
+            }
+            P{
+                font-size: 2rem;
+                line-height: 3rem;
+                font-weight: 300;
+            }
+            .left-footer, .mid-footer, .right-footer{
+                display: flex;
+                flex-direction: column;
+                gap: 3.5rem;
+                flex: 1;
+            }
+            .item-footer{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        .nami{
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $background;
+            letter-spacing: 5%;
+        }   
+        >a{
+            width: 35rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    >img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

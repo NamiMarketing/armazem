@@ -1,0 +1,151 @@
+@use "./colors" as *;
+@use "./global" as *;
+
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .header-back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+    }
+    .header-text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        h2{
+            font-size: 2.2rem;
+            color: $branco;
+            font-weight: 400;
+            line-height: 2.2rem;
+            letter-spacing: 2%;
+            font-family: $libre;
+        }
+    }
+    .nav-logo{
+        position: absolute;
+        top: 3.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+  
+    @media screen and (max-width:700px) {
+        aspect-ratio: 36/50;
+        height: auto;
+        .header-text{
+            position: absolute;
+            left: 2.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            width: 21.5rem;
+            gap: 2rem;
+            img{
+                width: 15rem;
+                height: 4rem;
+            }
+            h2{
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                margin-bottom: 0rem;
+            }
+            .text{
+                display: flex;
+                align-items: center;
+                width: 100% ;
+                gap: 1rem;
+                h1{
+                    font-size: 2.4rem;
+                    letter-spacing: 4%;
+                    line-height: 2.4rem;
+                }
+                img{
+                    width: 7.8rem;
+                    height: 2.2rem;
+                }
+            }
+        }
+        .top-flower{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 9rem;
+        }
+    }
+}
+
+.header2{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    .header-back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+    }
+    .nav-logo{
+        position: absolute;
+        top: 3.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        img{
+            width: 100%;
+        }
+    }
+  
+    @media screen and (max-width:700px) {
+        aspect-ratio: 36/50;
+        height: auto;
+        .header-text{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            h2{
+                font-size: 2.7rem;
+                line-height: 2.7rem;
+                letter-spacing: 4%;
+                color: $background;
+                text-align: center;
+            }
+        }
+        .top-flower{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 9rem;
+        }
+    }
+}
+
+
+@keyframes arrow{
+    from {
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(2rem);
+    }
+}

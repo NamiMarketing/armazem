@@ -1,0 +1,331 @@
+@use 'index' as *;
+
+.momentos{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    padding: 14rem 0 15rem;
+    justify-content: center;
+    position: relative;
+    h1{
+        font-size: 3.6rem;
+        line-height: 4.6rem;
+        letter-spacing: 0;
+        color: $background2;
+        width: 50rem;
+        font-family: $libre;
+    }
+    .info-momentos{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 61rem;
+        align-self: flex-end;
+        p{
+            font-size: 2rem;
+            line-height: 3.4rem;
+            letter-spacing: 1%;
+
+        }
+    }
+    .fotos-momentos{
+        display: flex;
+        gap: 4rem;
+        align-self: flex-end;
+        margin-top: 12rem;
+    }
+    .back-circle{
+        position: absolute;
+        left: 0;
+        bottom: 24rem;
+    }
+}
+
+.casas{
+    display: flex;
+    gap: 12.6rem;
+    margin-bottom: 17rem;
+    .left-casas{
+        aspect-ratio: 9/6;
+        position: relative;
+        .ambiente{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .change-arrow{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+            cursor: pointer;
+        }
+    }
+    .right-casas{
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        h4{
+            font-size: 1.8rem;
+            letter-spacing: 8%;
+            line-height: 4rem;
+            font-family: $area;
+            color: $background2;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        h2{
+            font-size: 4.8rem;
+            line-height: 6rem;
+            font-family: $libre;
+            letter-spacing: 0%;
+            color: $background2;
+            width: 21rem;
+        }
+        .info-casas{
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            width: 31rem;
+            p{
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                letter-spacing: 2%;
+            }
+            a{
+                width: 23rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.juveve{
+    display: flex;
+    background-color: $background2;
+    h1{
+        position: absolute;
+        font-size: 8.8rem;
+        line-height: 8.8rem;
+        font-weight: 400;
+        font-family: $filmotype;
+        top: 0;
+        transform: translateY(-55%);
+        left: 5rem;
+        color: $marrom;
+    }
+    img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+    .left-juveve{
+        flex: 1;
+        padding: 10rem 9.5rem 10rem 4.8rem;
+        position: relative;
+        .wrap-info{
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            width: 58rem;
+            p{
+                font-size: 2rem;
+                line-height: 3rem;
+                color: $branco;
+                letter-spacing: 0%;
+                font-weight: 500;
+            }
+            h4{
+                font-size: 2.8rem;
+                line-height: 2.8rem;
+                letter-spacing: -1%;
+                font-weight: 700;
+                font-family: $libre;
+                color: $background;
+            }
+            .item-menu{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                >p{
+                    font-size: 1.8rem;
+                    line-height: 1.8rem;
+                    font-weight: 400;
+                }
+                .top-item{
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: flex-start;
+                      .left-top{
+                        width: 12rem;
+                    }
+                    .buttons-menu{
+                        display: flex;
+                        gap: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .right-juveve{
+        flex: 1;
+    }
+}
+
+.juveve-bebidas{
+    display: flex;
+    z-index: 3;
+    padding: 0 10rem 15rem;
+    margin-top: -6rem;
+    gap: 7.4rem;
+    align-items: center;
+    .info-bebidas{
+        display: flex;
+        flex-direction: column;
+        width: 45rem;
+        gap: 3.7rem;
+        .title-bebidas{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            h4{
+                font-size: 2.4rem;
+                line-height: 2.4rem;
+                letter-spacing: 5%;
+                font-weight: 500;
+                font-family: $area;
+                color: $cinza-900;
+            }
+            h2{
+                font-size: 4.6rem;
+                line-height: 4.6rem;
+                letter-spacing: 0;
+                font-weight: 400;
+                font-family: $libre;
+                color: $cinza-900;
+            }
+        }
+        p{
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 1%;
+            font-weight: 400;
+        }
+        .bebidas-buttons{
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+            a{
+                width: 15rem;
+            }
+        }
+    }
+}
+
+.invert{
+    h1{
+        left: 9.5rem;
+        transform: translateY(-47%);
+    }
+    .left-juveve{
+        padding: 10rem 4.6rem 10rem 9.5rem;
+    }
+}
+
+.shopping{
+    justify-content: flex-end;
+    .info-bebidas{
+        .bebidas-buttons{
+            a{
+                width: 19rem;
+            }
+        }
+    }
+}
+
+.vinhos{
+    aspect-ratio: 144/60;
+    position: relative;
+    width: 100%;
+    height: auto;
+    img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        object-fit: cover;
+        z-index: 2;
+    }
+    .vinhos-info{
+        position: absolute;
+        top: 10rem;
+        left: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        z-index: 4;
+        width: 40rem;
+        h2{
+            font-size: 5rem;
+            line-height: 5rem;
+            letter-spacing: 0;
+            font-weight: 700;
+            font-family: $libre;
+            color: $background;
+        }
+        p{
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 1%;;
+            font-weight: 500;
+            color: $branco;
+        }
+        a{
+            width: 20rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.eventos{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding: 14rem 0rem 12rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+    .eventos-info{
+        width: 61rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h1{
+            font-size: 7rem;
+            line-height: 7rem;
+            letter-spacing: 0;
+            color: $marrom;
+            font-weight: 400;
+            font-family: $filmotype;
+            margin-left: -2rem;
+        }
+        h2{
+            font-size: 3.4rem;
+            line-height: 4.4rem;
+            letter-spacing: 2%;
+            font-weight: 700;
+            font-family: $libre;
+            color: $background2;
+        }
+        p{
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 2%;;
+            margin: 1rem 0 3rem;
+        }
+        a{
+            width: 19rem;
+            text-transform: uppercase;
+        }
+    }
+}

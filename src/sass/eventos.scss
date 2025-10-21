@@ -1,0 +1,98 @@
+@use 'index' as *;
+
+.viva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5.6rem;
+    padding-top: 10rem;
+    text-align: center;
+    max-width: 103rem;
+    margin: auto;
+    h1{
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+        color: $background2;
+        font-family: $libre;
+        letter-spacing: 0;
+    }
+    p{
+        font-size: 2rem;
+        line-height: 3rem;
+        letter-spacing: 1%;
+    }
+    a{
+        width: 31rem;
+        text-transform: uppercase;
+    }
+}
+
+.places{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9rem 0 10rem;
+    gap: 6rem;
+    .selector{
+        display: flex;
+        gap: 2rem;
+        button{
+            border: none;   
+        }
+    }
+    .intro{
+        display: flex;
+        gap: 10rem;
+        align-items: center;
+        justify-content: center;
+        .right-info{
+            .name{
+                margin-bottom: 5rem;
+                display: flex;
+                flex-direction: column;
+                h2:last-of-type{
+                    margin-left: 20rem;
+                    margin-top: -2rem;
+                }
+            }
+            h2{
+                font-size: 8.8rem;
+                line-height: 8.8rem;
+                font-weight: 400;
+                font-family: $filmotype;
+                color: $marrom;
+                letter-spacing: 0;
+            }
+            p{
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 1%;
+                color: $preto;
+                font-weight: 400;
+                margin-bottom: 3.5rem;
+            }
+            h5{
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 1%;
+                color: $preto;
+                font-weight: 500;
+                font-family: $area;
+                margin-bottom: 1rem;
+            }
+            a{
+                width: 25rem;
+                margin-top: 4rem;
+            }
+        }
+    }
+    .images{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
