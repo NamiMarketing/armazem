@@ -43,45 +43,23 @@
         height: auto;
         .header-text{
             position: absolute;
-            left: 2.4rem;
+            left: 50%;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translate(-50%, -50%);
             z-index: 3;
             display: flex;
             flex-direction: column;
             width: 21.5rem;
-            gap: 2rem;
-            img{
-                width: 15rem;
-                height: 4rem;
-            }
+            text-align: center;
             h2{
                 font-size: 1.6rem;
                 line-height: 1.9rem;
                 margin-bottom: 0rem;
             }
-            .text{
-                display: flex;
-                align-items: center;
-                width: 100% ;
-                gap: 1rem;
-                h1{
-                    font-size: 2.4rem;
-                    letter-spacing: 4%;
-                    line-height: 2.4rem;
-                }
-                img{
-                    width: 7.8rem;
-                    height: 2.2rem;
-                }
-            }
         }
-        .top-flower{
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            width: 9rem;
+        .nav-logo{
+            top: 3rem;
+            width: 17rem;
         }
     }
 }
@@ -117,24 +95,21 @@
             position: absolute;
             left: 50%;
             top: 50%;
+            transform: translate(-50%, -50%);
             z-index: 3;
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 21.5rem;
+            text-align: center;
             h2{
-                font-size: 2.7rem;
-                line-height: 2.7rem;
-                letter-spacing: 4%;
-                color: $background;
-                text-align: center;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                margin-bottom: 0rem;
             }
         }
-        .top-flower{
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            width: 9rem;
+        .nav-logo{
+            top: 3rem;
+            width: 17rem;
         }
     }
 }

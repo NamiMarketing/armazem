@@ -26,6 +26,24 @@
         width: 31rem;
         text-transform: uppercase;
     }
+    @media screen and (max-width:700px) {
+        gap: 4rem;
+        padding-top: 7rem;
+        max-width: 90%;
+        margin: auto;
+        h1{
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+        a{
+            width: 28rem;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .places{
@@ -94,5 +112,71 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+    }
+    @media screen and (max-width:700px) {
+        width: 90%;
+        padding: 6rem 0 4rem;
+        gap: 5rem;
+        .selector{
+            display: flex;
+            gap: 2rem;
+            button{
+                border: none;   
+            }
+            #juveve{
+                width: 14rem;
+            }
+        }
+        .intro{
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            h2{
+                font-size: 5rem;
+                line-height: 5rem;
+                font-weight: 400;
+                font-family: $filmotype;
+                color: $marrom;
+                letter-spacing: 0;
+                align-self: flex-start;
+            }
+            .name{
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                h2:last-of-type{
+                    margin-left: 13rem;
+                    margin-top: -1rem;
+                }
+            }
+            >img{
+                width: 100%;
+            }
+            .right-info{
+                p{
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    margin-bottom: 3rem;
+                }
+                h5{
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    margin-bottom: 2rem;
+                }
+                a{
+                    width: 22rem;
+                    margin-top: 3rem;
+                }
+            }
+        }
+        .images{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+        }
     }
 }

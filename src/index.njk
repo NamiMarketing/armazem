@@ -41,6 +41,7 @@ cssPath: "/css/home.css"
 </section>
 
 <section class="casas">
+    <h4 class="only-mobile">Nossas casas</h4>
     <div class="left-casas">
         <img src="../img/home/shopping.png" alt=""
             class="ambiente">
@@ -51,7 +52,7 @@ cssPath: "/css/home.css"
             alt="">
     </div>
     <div class="right-casas">
-        <h4>Nossas casas</h4>
+        <h4 class="tablet-desktop">Nossas casas</h4>
         <h2>Shopping Curitiba</h2>
         <div class="info-casas">
             <p class="casas-adress">
@@ -174,7 +175,8 @@ cssPath: "/css/home.css"
 </section>
 
 <section class="vinhos">
-    <img src="../img/home/vinhos.png" alt="">
+    <img class="tablet-desktop" src="../img/home/vinhos.png" alt="">
+    <img class="only-mobile" src="../img/home/vinhos-mob.png" alt="">
     <div class="vinhos-info">
         <h2>Vinhos</h2>
         <p>Não é só para degustar — aqui, você também pode levar nossos rótulos para casa. Uma loja de vinhos com curadoria especial para tornar cada momento único. Venha adquirir sua garrafa conosco, seja na unidade do Juvevê ou do Shopping Curitiba.</p>
@@ -215,4 +217,9 @@ cssPath: "/css/home.css"
             restaurantAdress.innerHTML = "R. Brg. Franco, 2300 - Loja 256 - Largo Curitiba, Curitiba - PR, 80250-903"
         }
     })
+
+    const home = document.querySelector('#home');
+    
+    home.classList.add("selected")
+
 </script>

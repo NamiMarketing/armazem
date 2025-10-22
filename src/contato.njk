@@ -7,10 +7,12 @@ cssPath: "/css/contato.css"
 {% include 'nav.njk' %}
 
 <div class="contato">
-    <img src="../img/contato-logo.png"
-        srcset="../img/contato-logo@2x.png 2x"
-        class="contato-logo"
-        alt="">
+    <a href="/">
+        <img src="../img/contato-logo.png"
+            srcset="../img/contato-logo@2x.png 2x"
+            class="contato-logo"
+            alt="">
+    </a>
 
     <div class="wrap-contato">
         <div class="item-contato">
@@ -58,7 +60,7 @@ cssPath: "/css/contato.css"
                 </div>
             </div>
         </div>
-        <div class="item-contato">
+        <div class="item-contato reverse">
             <div class="info-contato">
                 <h2>Shopping Curitiba</h2>
                 <h3>Endereço</h3>
@@ -106,3 +108,10 @@ cssPath: "/css/contato.css"
 
 
 {% include 'footer.njk' %}
+
+
+<script>
+    const contato = document.querySelector('#contato');
+    
+    contato.classList.add("selected")
+</script>

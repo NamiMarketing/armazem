@@ -35,9 +35,10 @@ cssPath: "/css/eventos.css"
         <button class="yellowButton" id="shopping">Shopping Curitiba</button>
     </div>
     <div class="intro" id="info">
+        <h2 class="only-mobile">Juvevê</h2>
         <img src="../img/eventos/juveve.png" alt="">
         <div class="right-info">
-            <h2>Juvevê</h2>
+            <h2 class="tablet-desktop">Juvevê</h2>
             <p>
                 Nosso deck se adapta para casamentos, formaturas e celebrações especiais. Oferecemos jantares à la carte, finger foods e menus personalizados para atender a todos os gostos e necessidades.
             </p>    
@@ -83,9 +84,10 @@ cssPath: "/css/eventos.css"
         switch (padrao){
             case "juveve":
                 intro.innerHTML = `
+                <h2 class="only-mobile">Juvevê</h2>
                 <img src="../img/eventos/juveve.png" alt="">
                 <div class="right-info">
-                    <h2>Juvevê</h2>
+                    <h2 class="tablet-desktop">Juvevê</h2>
                     <p>
                         Nosso deck se adapta para casamentos, formaturas e celebrações especiais. Oferecemos jantares à la carte, finger foods e menus personalizados para atender a todos os gostos e necessidades.
                     </p>    
@@ -106,9 +108,13 @@ cssPath: "/css/eventos.css"
             break;
             case "shopping":
                 intro.innerHTML = `
+                <div class="name only-mobile">
+                    <h2>Shopping</h2>
+                    <h2>Curitiba</h2>
+                </div>
                 <img src="../img/eventos/shopping.png" alt="">
                 <div class="right-info">
-                    <div class="name">
+                    <div class="name tablet-desktop">
                         <h2>Shopping</h2>
                         <h2>Curitiba</h2>
                     </div>
@@ -129,4 +135,7 @@ cssPath: "/css/eventos.css"
         }
     }
 
+    const eventos = document.querySelector('#eventos');
+    
+    eventos.classList.add("selected")
 </script>
