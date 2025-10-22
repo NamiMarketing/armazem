@@ -61,7 +61,7 @@ cssPath: "/css/home.css"
             <p>
                 Segunda a Sábado: 12h às 14:30 | 19h às 22:30<br/>Domingo: 12h às 15h
             </p>
-            <a href="" class="transparentButton"> Faça sua reserva</a>
+            <a id="contato" href="" target="_blank" class="transparentButton"> Faça sua reserva</a>
         </div>
     </div>
 </section>
@@ -152,7 +152,7 @@ cssPath: "/css/home.css"
                         <a href="../pdf/cardapio-shopping.pdf" target="_blank" class="blurButton">Menu A71</a>
                     </div>
                 </div>
-                <p>Das 18:3 às 22:00 | Sábados, domingos e feriados: Menu A71 </p>
+                <p>Das 18:30 às 22:00 | Sábados, domingos e feriados: Menu A71 </p>
             </div>
         </div>
     </div>
@@ -201,6 +201,7 @@ cssPath: "/css/home.css"
     const restaurantImage = document.querySelector('.ambiente');
     const restaurantName = document.querySelector('.right-casas h2');
     const restaurantAdress = document.querySelector('.casas-adress');
+    const contato = document.querySelector('#contato');
     let padrao = "shopping"
 
     button.addEventListener('click', () => {
@@ -209,14 +210,19 @@ cssPath: "/css/home.css"
             restaurantImage.src = "../img/home/juveve.png"
             restaurantName.innerHTML = "Juvevê"
             restaurantAdress.innerHTML = "R. Rocha Pombo, 246 - Juvevê, Curitiba - PR, 80030-390"
+            contato.href = "https://api.whatsapp.com/send?phone=554130304971&text=Estava%20no%20site%20e%20gostaria%20de%20fazer%20uma%20reserva."
         }
         else {
             padrao = "shopping"
             restaurantImage.src = "../img/home/shopping.png"
             restaurantName.innerHTML = "Shopping Curitiba"
             restaurantAdress.innerHTML = "R. Brg. Franco, 2300 - Loja 256 - Largo Curitiba, Curitiba - PR, 80250-903"
+            contato.href = "https://api.whatsapp.com/send?phone=5541988553826&text=Estava%20no%20site%20e%20gostaria%20de%20fazer%20uma%20reserva."
         }
+        console.log(contato)
+        console.log(restaurantImage.src)
     })
+
 
     const home = document.querySelector('#home');
     
