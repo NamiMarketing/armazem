@@ -1,0 +1,151 @@
+---
+title: Armazém 71 - Cucina - Vino
+layout: "base.njk"
+cssPath: "/css/contato.css"
+---
+
+{% include 'nav.njk' %}
+
+<div class="perguntas-page">
+    <a href="/">
+        <img src="../img/contato-logo.png"
+            srcset="../img/contato-logo@2x.png 2x"
+            class="contato-logo"
+            alt="">
+    </a>
+
+    <section class="perguntas">
+        <h2>Perguntas frequentes</h2>
+        <div class="itens">
+            <div class="item" onclick="toggleInfo('estacionamento')">
+                <h5>
+                O Armazém 71 possui estacionamento?
+                </h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="estacionamento">
+                <p>
+                    Sim, dispomos de um estacionamento gratuito para os nossos clientes. O acesso é pela rua lateral, Melchiades Fangueiro.
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('aluguel')">
+                <h5>Vocês alugam o espaço para eventos?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="aluguel">
+                <p>
+                    Sim, temos 2 opções de espaço para você realizar o seu evento. Para mais informações, ligue para 41 3030-4971.
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('vinho')">
+                <h5>Vocês são uma loja de vinhos?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="vinho">
+                <p>
+                    Sim, além do restaurante, onde você pode comprar seu vinho com o mesmo preço de loja, sem nenhuma cobrança a mais, possuímos a loja anexa, com aproximadamente 500 rótulos distribuídos em mais de 15 países.
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('delivery')">
+                <h5>
+                O Armazém 71 possui delivery?
+                </h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="delivery">
+                <p>
+                    Sim. Você pode fazer o seu pedido pelo ifood.
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('cartoes')">
+                <h5>Vocês aceitam todos os cartões?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="cartoes">
+                <p>
+                  Aceitamos os principais cartões: Visa/Mastercard/Elo/Amex/Sodexo Refeição e Ticket Refeição.
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('buffet')">
+                <h5>O Armazém 71 serve buffet de almoço no estilo self-service?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="buffet">
+                <p>
+                    Não servimos no estilo self-service, buffet livre ou por quilo. No almoço, durante a semana, temos nosso Business Lunch, um conceito de almoço onde você mesmo monta seu prato!
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('reserva')">
+                <h5>Como reservar uma mesa?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="reserva">
+                <p>
+                    Você pode fazer uma reserva pelo nosso telefone ou Whatsapp: 41 3030-4971 
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('pet')">
+                <h5>Posso levar meu pet ao Armazém 71?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="pet">
+                <p>
+                    Dentro do estabelecimento, não é possível receber pets.
+                </p>
+                </div>
+            </div>
+            <div class="item" onclick="toggleInfo('rolha')">
+                <h5>Posso levar meu vinho para consumir no Armazém 71?</h5>
+                <span class="srOnly"></span>
+                <span class="toggle-button">+</span>
+                <div class="more-info" id="rolha">
+                <p>
+                    Sim. Apesar de termos a loja anexa com aproximadamente 500 rótulos disponíveis, se preferir trazer o seu vinho, cobramos uma taxa de rolha no valor de R$40,00.
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% include 'footer.njk' %}
+
+
+<script>
+    const contato = document.querySelector('#contato');
+    
+    contato.classList.add("selected")
+</script>
+
+<!-- Script do perguntas frequentes -->
+
+<script>
+  function toggleInfo(id) {
+    const infoDiv = document.getElementById(id);
+    const button = infoDiv.previousElementSibling;
+    if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+      reset();
+      infoDiv.style.display = "block";
+      button.textContent = "-";
+    } else {
+      infoDiv.style.display = "none";
+      button.textContent = "+";
+    }
+  }
+  function reset() {
+    const info = document.getElementsByClassName("more-info");
+    const button = document.getElementsByClassName("toggle-button");
+    for (let i = 0; i < info.length; i++) {
+      info[i].style.display = "none";
+      button[i].textContent = "+";
+    }
+  }
+</script>
