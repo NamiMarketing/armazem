@@ -418,14 +418,16 @@
 }
 
 .invert{
-    flex-direction: column-reverse;
-    h1{
-        font-size: 5rem;
-        line-height: 5rem;
-        left: 5vw;
-    }
-    .left-juveve{
-        padding: 6.5rem 5vw;
+    @media screen and (max-width:700px) {
+        flex-direction: column-reverse;
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+            left: 5vw;
+        }
+        .left-juveve{
+            padding: 6.5rem 5vw;
+        }
     }
 }
 
