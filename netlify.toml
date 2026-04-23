@@ -1,0 +1,29 @@
+[build]
+  publish = "public"
+
+# ─── Imagens: cache de 1 dia ─────────────────────────────────────────────────
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ─── CSS: cache de 1 dia ─────────────────────────────────────────────────────
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ─── PDFs: cache de 1 dia ────────────────────────────────────────────────────
+[[headers]]
+  for = "/pdf/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ─── HTML: nunca fazer cache (sempre atualizado) ─────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
